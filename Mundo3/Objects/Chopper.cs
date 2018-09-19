@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Mundo3.SetRec;
+using Mundo3.Manager;
 #endregion
 
 namespace Mundo3.Objects
@@ -29,6 +30,12 @@ namespace Mundo3.Objects
         STATE actualState = STATE.parado;
         #endregion
 
+        public Chopper(String textureName)
+            : base(textureName)
+        {
+            this.quads = new List<Quad>();
+            this.texture = SceneManager.staticContent.Load<Texture2D>(textureName);
+        }
 
         public override void Update(GameTime gameTime)
         {

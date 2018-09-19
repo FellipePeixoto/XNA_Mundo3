@@ -27,7 +27,6 @@ namespace Mundo3.Objects
         BasicEffect basicEffect;
         Effect effect;
         GraphicsDevice device;
-        String textureName;
         Texture2D texture;
         VERTEX_TYPE vertType;
         #endregion
@@ -79,8 +78,10 @@ namespace Mundo3.Objects
             vertType = VERTEX_TYPE.Color;
         }
 
-        public Quad(Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4, String textureName, String effectName)
+        public Quad(Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4)
         {
+            effect = SceneManager.staticEffect;
+
             world = Matrix.Identity;
 
             // Incluir em todo construtor;
@@ -98,9 +99,6 @@ namespace Mundo3.Objects
 
             vertexBuffer = new VertexBuffer(device, typeof(VertexPositionTexture), vertsTexture.Length, BufferUsage.None);
             vertexBuffer.SetData<VertexPositionTexture>(vertsTexture);
-
-            effect = SceneManager.staticContent.Load<Effect>(effectName);
-            this.texture = SceneManager.staticContent.Load<Texture2D>(textureName);
 
             vertType = VERTEX_TYPE.Texture;
         }
@@ -166,6 +164,11 @@ namespace Mundo3.Objects
                 vertsColor[4].Color = color;
                 vertsColor[5].Color = color;
             }
+        }
+
+        public void SetTexture(Texture2D texture)
+        {
+            this.texture = texture;
         }
     }
 }

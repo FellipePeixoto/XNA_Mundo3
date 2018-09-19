@@ -21,6 +21,8 @@ namespace Mundo3.SetRec
         String desc;
         #endregion
 
+        Obj parede;
+
         /// <summary>
         /// Cria uma cena
         /// </summary>
@@ -35,7 +37,6 @@ namespace Mundo3.SetRec
 
         public void LoadContent(ContentManager content)
         {
-
             foreach (Obj obj in objects)
             {
                 obj.LoadContent(content);

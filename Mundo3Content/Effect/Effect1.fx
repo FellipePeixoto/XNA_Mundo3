@@ -44,7 +44,7 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
 	float dist = distance(input.TexCoord, mouse);
 	float4 output;
 	output = tex2D(colorTextureSampler, input.TexCoord);
-	output *= (r - dist / r);
+	//output *= (r - dist / r);
     return output;
 }
 

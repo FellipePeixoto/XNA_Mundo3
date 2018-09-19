@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Mundo3.SetRec;
+using Mundo3.Manager;
 #endregion
 
 namespace Mundo3.Objects
@@ -19,6 +20,7 @@ namespace Mundo3.Objects
         #region protected
         protected List<Quad> quads;
         protected Vector3 center;
+        protected Texture2D texture;
         #endregion
 
         public Obj()
@@ -26,8 +28,24 @@ namespace Mundo3.Objects
             quads = new List<Quad>();
         }
 
+        public Obj(String textureName)
+        {
+            this.quads = new List<Quad>();
+            this.texture = SceneManager.staticContent.Load<Texture2D>(textureName);
+        }
+
         public Obj(List<Quad> quads)
         {
+            this.quads = quads;
+        }
+
+        public Obj(String textureName, List<Quad> quads)
+        {
+            this.texture = SceneManager.staticContent.Load<Texture2D>(textureName);
+            foreach (Quad quad in quads)
+            {
+                quad.SetTexture(texture);
+            }
             this.quads = quads;
         }
 
@@ -50,6 +68,13 @@ namespace Mundo3.Objects
 
         public void AddQuads(List<Quad> quads)
         {
+            if (texture != null)
+            {
+                foreach (Quad quad in quads)
+                {
+                    quad.SetTexture(this.texture);
+                }
+            }
             this.quads.AddRange(quads);
         }
 
