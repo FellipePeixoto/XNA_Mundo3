@@ -41,7 +41,7 @@ namespace Mundo3.Manager
             screen.SetHeight(screenHeight);
 
             camera = Camera.GetInstance();
-            camera.SetCameraPosition(new Vector3(16.891092f, 13.364608f, 12.334279f));
+            camera.SetCameraPosition(new Vector3(18.5f, 3.5f, 6));
             camera.SetCameraTarget(Vector3.Zero);
 
             staticEffect = staticContent.Load<Effect>(@"Effect\effect1");
@@ -50,742 +50,741 @@ namespace Mundo3.Manager
         public static void LoadContent(ContentManager content)
         {
             //TODO: Create Objects to include on set
-            chooper = new Chopper(@"Texture\teste");
+            chooper = new Chopper(@"Texture\camo");
             #region set do helicoptero
             List<Quad> heliBody = new List<Quad> 
-            { 
+            {
                 #region heli body
-		new Quad(new Vector3(-0.50f,-0.00f,1.50f),
+                new Quad(new Vector3(-0.50f,-0.00f,1.50f),
 new Vector3(-0.50f,0.20f,1.50f),
 new Vector3(-0.70f,0.20f,1.50f),
 new Vector3(-0.70f,-0.00f,1.50f)
-),
+,""),
 
 new Quad(new Vector3(-1.00f,0.60f,-0.50f),
 new Vector3(-1.00f,2.60f,-0.50f),
 new Vector3(1.00f,2.60f,-0.50f),
 new Vector3(1.00f,0.60f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.70f,-0.00f,1.50f),
 new Vector3(-0.70f,0.20f,1.50f),
 new Vector3(-0.70f,0.20f,-0.50f),
 new Vector3(-0.70f,0.00f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(-1.00f,2.60f,0.50f),
 new Vector3(1.00f,2.60f,0.50f),
 new Vector3(1.00f,2.60f,-0.50f),
 new Vector3(-1.00f,2.60f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.50f,0.20f,-0.30f),
 new Vector3(-0.70f,0.20f,-0.30f),
 new Vector3(-0.70f,0.60f,-0.30f),
 new Vector3(-0.50f,0.60f,-0.30f)
-),
+,""),
 
 new Quad(new Vector3(-0.70f,0.00f,-0.50f),
 new Vector3(-0.70f,0.20f,-0.50f),
 new Vector3(-0.50f,0.20f,-0.50f),
 new Vector3(-0.50f,0.00f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.50f,0.00f,-0.50f),
 new Vector3(-0.50f,-0.00f,1.50f),
 new Vector3(-0.70f,-0.00f,1.50f),
 new Vector3(-0.70f,0.00f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.50f,-0.00f,1.50f),
 new Vector3(-0.50f,0.00f,-0.50f),
 new Vector3(-0.50f,0.20f,-0.50f),
 new Vector3(-0.50f,0.20f,1.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.50f,0.20f,1.50f),
 new Vector3(-0.50f,0.20f,-0.50f),
 new Vector3(-0.70f,0.20f,-0.50f),
 new Vector3(-0.70f,0.20f,1.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.70f,0.20f,1.00f),
 new Vector3(-0.70f,0.20f,1.30f),
 new Vector3(-0.70f,0.60f,1.30f),
 new Vector3(-0.70f,0.60f,1.00f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,0.62f,-3.50f),
 new Vector3(-0.09f,1.58f,-3.50f),
 new Vector3(0.09f,1.58f,-3.50f),
 new Vector3(0.09f,0.62f,-3.50f)
-),
+,""),
 
 new Quad(new Vector3(0.30f,0.80f,-0.50f),
 new Vector3(-0.30f,0.80f,-0.50f),
 new Vector3(-0.09f,0.80f,-2.50f),
 new Vector3(0.09f,0.80f,-2.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.30f,0.80f,-0.50f),
 new Vector3(-0.30f,1.40f,-0.50f),
 new Vector3(-0.09f,1.40f,-2.50f),
 new Vector3(-0.09f,0.80f,-2.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.50f,0.20f,1.00f),
 new Vector3(-0.70f,0.20f,1.00f),
 new Vector3(-0.70f,0.60f,1.00f),
 new Vector3(-0.50f,0.60f,1.00f)
-),
+,""),
 
 new Quad(new Vector3(-0.50f,0.20f,-0.00f),
 new Vector3(-0.50f,0.20f,-0.30f),
 new Vector3(-0.50f,0.60f,-0.30f),
 new Vector3(-0.50f,0.60f,-0.00f)
-),
+,""),
 
 new Quad(new Vector3(-0.70f,0.20f,-0.30f),
 new Vector3(-0.70f,0.20f,-0.00f),
 new Vector3(-0.70f,0.60f,-0.00f),
 new Vector3(-0.70f,0.60f,-0.30f)
-),
+,""),
 
 new Quad(new Vector3(-0.50f,0.20f,1.30f),
 new Vector3(-0.50f,0.20f,1.00f),
 new Vector3(-0.50f,0.60f,1.00f),
 new Vector3(-0.50f,0.60f,1.30f)
-),
+,""),
 
 new Quad(new Vector3(-0.70f,0.20f,-0.00f),
 new Vector3(-0.50f,0.20f,-0.00f),
 new Vector3(-0.50f,0.60f,-0.00f),
 new Vector3(-0.70f,0.60f,-0.00f)
-),
+,""),
 
 new Quad(new Vector3(-0.70f,0.20f,1.30f),
 new Vector3(-0.50f,0.20f,1.30f),
 new Vector3(-0.50f,0.60f,1.30f),
 new Vector3(-0.70f,0.60f,1.30f)
-),
+,""),
 
 new Quad(new Vector3(1.00f,0.60f,1.50f),
 new Vector3(1.00f,1.50f,1.50f),
 new Vector3(-1.00f,1.50f,1.50f),
 new Vector3(-1.00f,0.60f,1.50f)
-),
-
-new Quad(new Vector3(-1.00f,1.50f,1.50f),
-new Vector3(-1.00f,2.60f,0.50f),
-new Vector3(-1.00f,2.60f,-0.50f),
-new Vector3(-1.00f,1.50f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(1.00f,0.60f,1.50f),
 new Vector3(-1.00f,0.60f,1.50f),
 new Vector3(-1.00f,0.60f,-0.50f),
 new Vector3(1.00f,0.60f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,1.58f,-2.50f),
 new Vector3(0.09f,1.58f,-2.50f),
 new Vector3(0.09f,1.58f,-3.50f),
 new Vector3(-0.09f,1.58f,-3.50f)
-),
-
-new Quad(new Vector3(1.00f,2.60f,0.50f),
-new Vector3(-1.00f,2.60f,0.50f),
-new Vector3(-1.00f,1.50f,1.50f),
-new Vector3(1.00f,1.50f,1.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,0.62f,-2.50f),
 new Vector3(0.09f,0.62f,-2.50f),
 new Vector3(0.09f,1.58f,-2.50f),
 new Vector3(-0.09f,1.58f,-2.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.30f,1.40f,-0.50f),
 new Vector3(0.30f,1.40f,-0.50f),
 new Vector3(0.09f,1.40f,-2.50f),
 new Vector3(-0.09f,1.40f,-2.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,0.80f,-3.30f),
 new Vector3(-0.09f,0.80f,-2.70f),
 new Vector3(0.00f,0.80f,-2.70f),
 new Vector3(0.00f,0.80f,-3.30f)
-),
+,""),
 
 new Quad(new Vector3(0.09f,0.62f,-2.50f),
 new Vector3(-0.09f,0.62f,-2.50f),
 new Vector3(-0.09f,0.62f,-3.50f),
 new Vector3(0.09f,0.62f,-3.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,1.40f,-2.70f),
 new Vector3(-0.09f,0.80f,-2.70f),
 new Vector3(-0.09f,0.62f,-2.50f),
 new Vector3(-0.09f,1.58f,-2.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,0.80f,-3.30f),
 new Vector3(-0.09f,1.40f,-3.30f),
 new Vector3(-0.09f,1.58f,-3.50f),
 new Vector3(-0.09f,0.62f,-3.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,0.80f,-2.70f),
 new Vector3(-0.09f,0.80f,-3.30f),
 new Vector3(-0.09f,0.62f,-3.50f),
 new Vector3(-0.09f,0.62f,-2.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,1.40f,-3.30f),
 new Vector3(-0.09f,1.40f,-2.70f),
 new Vector3(-0.09f,1.58f,-2.50f),
 new Vector3(-0.09f,1.58f,-3.50f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,0.80f,-2.70f),
 new Vector3(-0.09f,1.40f,-2.70f),
 new Vector3(0.00f,1.40f,-2.70f),
 new Vector3(0.00f,0.80f,-2.70f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,1.40f,-2.70f),
 new Vector3(-0.09f,1.40f,-3.30f),
 new Vector3(0.00f,1.40f,-3.30f),
 new Vector3(0.00f,1.40f,-2.70f)
-),
+,""),
 
 new Quad(new Vector3(-0.09f,1.40f,-3.30f),
 new Vector3(-0.09f,0.80f,-3.30f),
 new Vector3(0.00f,0.80f,-3.30f),
 new Vector3(0.00f,1.40f,-3.30f)
-),
+,""),
 
 new Quad(new Vector3(0.50f,-0.00f,1.50f),
 new Vector3(0.70f,-0.00f,1.50f),
 new Vector3(0.70f,0.20f,1.50f),
 new Vector3(0.50f,0.20f,1.50f)
-),
+,""),
 
 new Quad(new Vector3(0.70f,-0.00f,1.50f),
 new Vector3(0.70f,0.00f,-0.50f),
 new Vector3(0.70f,0.20f,-0.50f),
 new Vector3(0.70f,0.20f,1.50f)
-),
+,""),
 
 new Quad(new Vector3(0.50f,0.20f,-0.30f),
 new Vector3(0.50f,0.60f,-0.30f),
 new Vector3(0.70f,0.60f,-0.30f),
 new Vector3(0.70f,0.20f,-0.30f)
-),
+,""),
 
 new Quad(new Vector3(0.70f,0.00f,-0.50f),
 new Vector3(0.50f,0.00f,-0.50f),
 new Vector3(0.50f,0.20f,-0.50f),
 new Vector3(0.70f,0.20f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(0.50f,0.00f,-0.50f),
 new Vector3(0.70f,0.00f,-0.50f),
 new Vector3(0.70f,-0.00f,1.50f),
 new Vector3(0.50f,-0.00f,1.50f)
-),
+,""),
 
 new Quad(new Vector3(0.50f,-0.00f,1.50f),
 new Vector3(0.50f,0.20f,1.50f),
 new Vector3(0.50f,0.20f,-0.50f),
 new Vector3(0.50f,0.00f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(0.50f,0.20f,1.50f),
 new Vector3(0.70f,0.20f,1.50f),
 new Vector3(0.70f,0.20f,-0.50f),
 new Vector3(0.50f,0.20f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(0.70f,0.20f,1.00f),
 new Vector3(0.70f,0.60f,1.00f),
 new Vector3(0.70f,0.60f,1.30f),
 new Vector3(0.70f,0.20f,1.30f)
-),
+,""),
 
 new Quad(new Vector3(0.30f,0.80f,-0.50f),
 new Vector3(0.09f,0.80f,-2.50f),
 new Vector3(0.09f,1.40f,-2.50f),
 new Vector3(0.30f,1.40f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(0.50f,0.20f,1.00f),
 new Vector3(0.50f,0.60f,1.00f),
 new Vector3(0.70f,0.60f,1.00f),
 new Vector3(0.70f,0.20f,1.00f)
-),
+,""),
 
 new Quad(new Vector3(0.50f,0.20f,0.00f),
 new Vector3(0.50f,0.60f,0.00f),
 new Vector3(0.50f,0.60f,-0.30f),
 new Vector3(0.50f,0.20f,-0.30f)
-),
+,""),
 
 new Quad(new Vector3(0.70f,0.20f,-0.30f),
 new Vector3(0.70f,0.60f,-0.30f),
 new Vector3(0.70f,0.60f,0.00f),
 new Vector3(0.70f,0.20f,0.00f)
-),
+,""),
 
 new Quad(new Vector3(0.50f,0.20f,1.30f),
 new Vector3(0.50f,0.60f,1.30f),
 new Vector3(0.50f,0.60f,1.00f),
 new Vector3(0.50f,0.20f,1.00f)
-),
+,""),
 
 new Quad(new Vector3(0.70f,0.20f,0.00f),
 new Vector3(0.70f,0.60f,0.00f),
 new Vector3(0.50f,0.60f,0.00f),
 new Vector3(0.50f,0.20f,0.00f)
-),
+,""),
 
 new Quad(new Vector3(0.70f,0.20f,1.30f),
 new Vector3(0.70f,0.60f,1.30f),
 new Vector3(0.50f,0.60f,1.30f),
 new Vector3(0.50f,0.20f,1.30f)
-),
-
-new Quad(new Vector3(1.00f,2.60f,-0.50f),
-new Vector3(1.00f,2.60f,0.50f),
-new Vector3(1.00f,1.50f,1.50f),
-new Vector3(1.00f,1.50f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(0.09f,0.80f,-3.30f),
 new Vector3(0.00f,0.80f,-3.30f),
 new Vector3(0.00f,0.80f,-2.70f),
 new Vector3(0.09f,0.80f,-2.70f)
-),
+,""),
 
 new Quad(new Vector3(0.09f,1.40f,-2.70f),
 new Vector3(0.09f,1.58f,-2.50f),
 new Vector3(0.09f,0.62f,-2.50f),
 new Vector3(0.09f,0.80f,-2.70f)
-),
+,""),
 
 new Quad(new Vector3(0.09f,0.80f,-3.30f),
 new Vector3(0.09f,0.62f,-3.50f),
 new Vector3(0.09f,1.58f,-3.50f),
 new Vector3(0.09f,1.40f,-3.30f)
-),
+,""),
 
 new Quad(new Vector3(0.09f,0.80f,-2.70f),
 new Vector3(0.09f,0.62f,-2.50f),
 new Vector3(0.09f,0.62f,-3.50f),
 new Vector3(0.09f,0.80f,-3.30f)
-),
+,""),
 
 new Quad(new Vector3(0.09f,1.40f,-3.30f),
 new Vector3(0.09f,1.58f,-3.50f),
 new Vector3(0.09f,1.58f,-2.50f),
 new Vector3(0.09f,1.40f,-2.70f)
-),
+,""),
 
 new Quad(new Vector3(0.09f,0.80f,-2.70f),
 new Vector3(0.00f,0.80f,-2.70f),
 new Vector3(0.00f,1.40f,-2.70f),
 new Vector3(0.09f,1.40f,-2.70f)
-),
+,""),
 
 new Quad(new Vector3(0.09f,1.40f,-2.70f),
 new Vector3(0.00f,1.40f,-2.70f),
 new Vector3(0.00f,1.40f,-3.30f),
 new Vector3(0.09f,1.40f,-3.30f)
-),
+,""),
 
 new Quad(new Vector3(0.09f,1.40f,-3.30f),
 new Vector3(0.00f,1.40f,-3.30f),
 new Vector3(0.00f,0.80f,-3.30f),
 new Vector3(0.09f,0.80f,-3.30f)
-),
+,""),
 
 new Quad(new Vector3(-1.00f,0.60f,-0.50f),
 new Vector3(-1.00f,0.60f,1.50f),
 new Vector3(-1.00f,1.50f,1.50f),
 new Vector3(-1.00f,1.50f,-0.50f)
-),
+,""),
 
 new Quad(new Vector3(1.00f,1.50f,1.50f),
 new Vector3(1.00f,0.60f,1.50f),
 new Vector3(1.00f,0.60f,-0.50f),
 new Vector3(1.00f,1.50f,-0.50f)
-), 
-	#endregion
+,""),
+                #endregion
+            };
+
+            List<Quad> glass = new List<Quad>
+            {
+                #region glass
+                new Quad(new Vector3(-1.00f,1.50f,1.50f),
+new Vector3(-1.00f,2.60f,0.50f),
+new Vector3(-1.00f,2.60f,-0.50f),
+new Vector3(-1.00f,1.50f,-0.50f)
+,@"Texture\vidro"),
+
+new Quad(new Vector3(1.00f,2.60f,0.50f),
+new Vector3(-1.00f,2.60f,0.50f),
+new Vector3(-1.00f,1.50f,1.50f),
+new Vector3(1.00f,1.50f,1.50f)
+,@"Texture\vidro"),
+
+new Quad(new Vector3(1.00f,2.60f,-0.50f),
+new Vector3(1.00f,2.60f,0.50f),
+new Vector3(1.00f,1.50f,1.50f),
+new Vector3(1.00f,1.50f,-0.50f)
+,@"Texture\vidro"),
+                #endregion
             };
 
             List<Quad> heliMainBlade = new List<Quad>
             {
-                #region main blades
+                #region main blade
                 new Quad(new Vector3(0.06f,0.10f,0.06f),
 new Vector3(0.06f,0.10f,-0.06f),
 new Vector3(0.06f,0.20f,-0.06f),
-new Vector3(0.06f,0.20f,0.06f),
-Color.Green),
+new Vector3(0.06f,0.20f,0.06f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.06f,-0.00f,-0.06f),
 new Vector3(-0.06f,0.10f,-0.06f),
 new Vector3(0.06f,0.10f,-0.06f),
-new Vector3(0.06f,-0.00f,-0.06f),
-Color.Green),
+new Vector3(0.06f,-0.00f,-0.06f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.06f,-0.00f,0.06f),
 new Vector3(-0.06f,0.10f,0.06f),
 new Vector3(-0.06f,0.10f,-0.06f),
-new Vector3(-0.06f,-0.00f,-0.06f),
-Color.Green),
+new Vector3(-0.06f,-0.00f,-0.06f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(0.06f,-0.00f,0.06f),
 new Vector3(0.06f,0.10f,0.06f),
 new Vector3(-0.06f,0.10f,0.06f),
-new Vector3(-0.06f,-0.00f,0.06f),
-Color.Green),
+new Vector3(-0.06f,-0.00f,0.06f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(0.06f,-0.00f,-0.06f),
 new Vector3(0.06f,0.10f,-0.06f),
 new Vector3(0.06f,0.10f,0.06f),
-new Vector3(0.06f,-0.00f,0.06f),
-Color.Green),
+new Vector3(0.06f,-0.00f,0.06f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.06f,0.20f,0.06f),
 new Vector3(0.06f,0.20f,0.06f),
 new Vector3(0.06f,0.20f,-0.06f),
-new Vector3(-0.06f,0.20f,-0.06f),
-Color.Green),
+new Vector3(-0.06f,0.20f,-0.06f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(0.06f,0.10f,-0.06f),
 new Vector3(-0.06f,0.10f,-0.06f),
 new Vector3(-0.06f,0.20f,-0.06f),
-new Vector3(0.06f,0.20f,-0.06f),
-Color.Green),
+new Vector3(0.06f,0.20f,-0.06f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.06f,0.10f,0.06f),
 new Vector3(0.06f,0.10f,0.06f),
 new Vector3(0.06f,0.20f,0.06f),
-new Vector3(-0.06f,0.20f,0.06f),
-Color.Green),
+new Vector3(-0.06f,0.20f,0.06f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.06f,0.10f,-0.06f),
 new Vector3(-0.06f,0.10f,0.06f),
 new Vector3(-0.06f,0.20f,0.06f),
-new Vector3(-0.06f,0.20f,-0.06f),
-Color.Green),
+new Vector3(-0.06f,0.20f,-0.06f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.06f,0.10f,0.06f),
 new Vector3(-0.06f,0.10f,-0.06f),
-new Vector3(-3.00f,0.10f,-0.06f),
-new Vector3(-3.00f,0.10f,0.06f),
-Color.Green),
+new Vector3(-3.00f,0.10f,-0.15f),
+new Vector3(-3.00f,0.10f,0.15f)
+,@"Texture\blade"),
 
-new Quad(new Vector3(-0.06f,0.10f,-3.00f),
+new Quad(new Vector3(-0.15f,0.10f,-3.00f),
 new Vector3(-0.06f,0.10f,-0.06f),
 new Vector3(0.06f,0.10f,-0.06f),
-new Vector3(0.06f,0.10f,-3.00f),
-Color.Green),
+new Vector3(0.15f,0.10f,-3.00f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(0.06f,0.10f,-0.06f),
 new Vector3(0.06f,0.10f,0.06f),
-new Vector3(3.00f,0.10f,0.06f),
-new Vector3(3.00f,0.10f,-0.06f),
-Color.Green),
+new Vector3(3.00f,0.10f,0.15f),
+new Vector3(3.00f,0.10f,-0.15f)
+,@"Texture\blade"),
 
-new Quad(new Vector3(0.06f,0.10f,3.00f),
+new Quad(new Vector3(0.15f,0.10f,3.00f),
 new Vector3(0.06f,0.10f,0.06f),
 new Vector3(-0.06f,0.10f,0.06f),
-new Vector3(-0.06f,0.10f,3.00f),
-Color.Green),
+new Vector3(-0.15f,0.10f,3.00f)
+,@"Texture\blade"),
                 #endregion
             };
 
             List<Quad> heliTailBlade = new List<Quad>()
             {
-                #region tail blades
+                #region tail blade
                 new Quad(new Vector3(-0.03f,0.02f,-0.02f),
 new Vector3(-0.03f,0.02f,0.02f),
-new Vector3(-0.03f,0.20f,0.02f),
-new Vector3(-0.03f,0.20f,-0.02f),
-Color.Green),
+new Vector3(-0.03f,0.20f,0.04f),
+new Vector3(-0.03f,0.20f,-0.04f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.03f,-0.02f,-0.02f),
 new Vector3(-0.03f,0.02f,-0.02f),
-new Vector3(-0.03f,0.02f,-0.20f),
-new Vector3(-0.03f,-0.02f,-0.20f),
-Color.Green),
+new Vector3(-0.03f,0.04f,-0.20f),
+new Vector3(-0.03f,-0.04f,-0.20f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(0.00f,0.02f,0.02f),
 new Vector3(0.00f,-0.02f,0.02f),
 new Vector3(0.00f,-0.02f,-0.02f),
-new Vector3(0.00f,0.02f,-0.02f),
-Color.Green),
+new Vector3(0.00f,0.02f,-0.02f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.03f,0.02f,0.02f),
 new Vector3(-0.03f,0.02f,-0.02f),
 new Vector3(-0.06f,0.02f,-0.02f),
-new Vector3(-0.06f,0.02f,0.02f),
-Color.Green),
+new Vector3(-0.06f,0.02f,0.02f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(0.00f,-0.02f,-0.02f),
 new Vector3(-0.03f,-0.02f,-0.02f),
 new Vector3(-0.03f,0.02f,-0.02f),
-new Vector3(0.00f,0.02f,-0.02f),
-Color.Green),
+new Vector3(0.00f,0.02f,-0.02f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(0.00f,-0.02f,0.02f),
 new Vector3(-0.03f,-0.02f,0.02f),
 new Vector3(-0.03f,-0.02f,-0.02f),
-new Vector3(0.00f,-0.02f,-0.02f),
-Color.Green),
+new Vector3(0.00f,-0.02f,-0.02f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(0.00f,0.02f,0.02f),
 new Vector3(-0.03f,0.02f,0.02f),
 new Vector3(-0.03f,-0.02f,0.02f),
-new Vector3(0.00f,-0.02f,0.02f),
-Color.Green),
+new Vector3(0.00f,-0.02f,0.02f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(0.00f,0.02f,-0.02f),
 new Vector3(-0.03f,0.02f,-0.02f),
 new Vector3(-0.03f,0.02f,0.02f),
-new Vector3(0.00f,0.02f,0.02f),
-Color.Green),
+new Vector3(0.00f,0.02f,0.02f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.03f,-0.02f,0.02f),
 new Vector3(-0.03f,-0.02f,-0.02f),
-new Vector3(-0.03f,-0.20f,-0.02f),
-new Vector3(-0.03f,-0.20f,0.02f),
-Color.Green),
+new Vector3(-0.03f,-0.20f,-0.04f),
+new Vector3(-0.03f,-0.20f,0.04f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.03f,-0.02f,0.02f),
 new Vector3(-0.03f,0.02f,0.02f),
-new Vector3(-0.03f,0.02f,0.20f),
-new Vector3(-0.03f,-0.02f,0.20f),
-Color.Green),
+new Vector3(-0.03f,0.04f,0.20f),
+new Vector3(-0.03f,-0.04f,0.20f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.06f,-0.02f,0.02f),
 new Vector3(-0.06f,0.02f,0.02f),
 new Vector3(-0.06f,0.02f,-0.02f),
-new Vector3(-0.06f,-0.02f,-0.02f),
-Color.Green),
+new Vector3(-0.06f,-0.02f,-0.02f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.03f,0.02f,-0.02f),
 new Vector3(-0.03f,-0.02f,-0.02f),
 new Vector3(-0.06f,-0.02f,-0.02f),
-new Vector3(-0.06f,0.02f,-0.02f),
-Color.Green),
+new Vector3(-0.06f,0.02f,-0.02f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.03f,-0.02f,0.02f),
 new Vector3(-0.03f,0.02f,0.02f),
 new Vector3(-0.06f,0.02f,0.02f),
-new Vector3(-0.06f,-0.02f,0.02f),
-Color.Green),
+new Vector3(-0.06f,-0.02f,0.02f)
+,@"Texture\blade"),
 
 new Quad(new Vector3(-0.03f,-0.02f,-0.02f),
 new Vector3(-0.03f,-0.02f,0.02f),
 new Vector3(-0.06f,-0.02f,0.02f),
-new Vector3(-0.06f,-0.02f,-0.02f),
-Color.Green),
+new Vector3(-0.06f,-0.02f,-0.02f)
+,@"Texture\blade"),
                 #endregion
             };
             chooper.AddQuads(heliBody); // adicionar a lista de poligonos
-            chooper.SetPosition(0, 1.5f, 0.5f); // setar posicao do helicoptero
+            chooper.AddQuads(glass);
+            chooper.SetPosition(0,  1.5f, 0.5f); // setar posicao do helicoptero
             chooper.SetMainBlade(0, 4.1f, 0.5f, heliMainBlade); // adicionar helices e setar posicoes
             chooper.SetTailBlade(0, 2.6f, -2.5f, heliTailBlade); 
             #endregion
 
-            Obj casa = new Obj(@"Texture\wall");
+
+            Obj casa = new Obj(@"Texture\Wall");
             #region set da casa
-            List<Quad> houseBody = new List<Quad>
+            List<Quad> parede = new List<Quad>
             {
-                #region House All Quads
+                #region paredes
                 new Quad(new Vector3(-1.50f,1.00f,2.75f),
 new Vector3(-1.50f,1.00f,0.75f),
-new Vector3(-1.50f,-0.00f,0.75f),
-new Vector3(-1.50f,-0.00f,2.75f)
-),
+new Vector3(-1.50f,0.00f,0.75f),
+new Vector3(-1.50f,0.00f,2.75f)
+,@"Texture\wall"),
 
 new Quad(new Vector3(-1.50f,3.00f,-3.75f),
 new Vector3(-1.50f,2.00f,-3.75f),
 new Vector3(-1.50f,2.00f,3.75f),
 new Vector3(-1.50f,3.00f,3.75f)
-),
+,@"Texture\wall"),
 
 new Quad(new Vector3(-1.50f,2.00f,-1.10f),
 new Vector3(-1.50f,1.30f,-1.10f),
 new Vector3(-1.50f,1.30f,0.75f),
 new Vector3(-1.50f,2.00f,0.75f)
-),
+,@"Texture\wall"),
 
 new Quad(new Vector3(-1.50f,0.00f,-3.75f),
 new Vector3(-1.50f,3.00f,-3.75f),
 new Vector3(1.30f,3.00f,-3.75f),
 new Vector3(1.30f,0.00f,-3.75f)
-),
+,@"Texture\wall"),
 
 new Quad(new Vector3(-1.50f,1.30f,-1.80f),
 new Vector3(-1.50f,2.00f,-1.80f),
 new Vector3(-1.50f,2.00f,-3.75f),
 new Vector3(-1.50f,1.30f,-3.75f)
-),
+,@"Texture\wall"),
 
 new Quad(new Vector3(-1.50f,2.00f,3.75f),
 new Vector3(-1.50f,2.00f,2.75f),
-new Vector3(-1.50f,-0.00f,2.75f),
+new Vector3(-1.50f,0.00f,2.75f),
 new Vector3(-1.50f,0.00f,3.75f)
-),
+,@"Texture\wall"),
 
 new Quad(new Vector3(-1.50f,1.30f,0.75f),
 new Vector3(-1.50f,1.30f,-3.75f),
 new Vector3(-1.50f,0.00f,-3.75f),
-new Vector3(-1.50f,-0.00f,0.75f)
-),
-
-new Quad(new Vector3(1.30f,1.80f,1.40f),
-new Vector3(1.30f,1.80f,-1.10f),
-new Vector3(1.30f,2.00f,-1.10f),
-new Vector3(1.30f,2.00f,1.40f)
-),
-
-new Quad(new Vector3(1.30f,1.80f,1.40f),
-new Vector3(1.30f,-0.00f,1.40f),
-new Vector3(1.30f,0.00f,-1.80f),
-new Vector3(1.30f,1.80f,-1.80f)
-),
-
-new Quad(new Vector3(1.30f,-0.00f,2.10f),
-new Vector3(1.30f,-0.00f,1.40f),
-new Vector3(1.30f,1.30f,1.40f),
-new Vector3(1.30f,1.30f,2.10f)
-),
+new Vector3(-1.50f,0.00f,0.75f)
+,@"Texture\wall"),
 
 new Quad(new Vector3(0.51f,2.00f,3.75f),
-new Vector3(0.51f,-0.01f,3.75f),
+new Vector3(0.51f,0.00f,3.75f),
 new Vector3(1.30f,0.00f,3.75f),
 new Vector3(1.30f,2.00f,3.75f)
-),
-
-new Quad(new Vector3(1.30f,2.00f,-1.80f),
-new Vector3(1.30f,0.00f,-1.80f),
-new Vector3(1.30f,0.00f,-3.75f),
-new Vector3(1.30f,2.00f,-3.75f)
-),
-
-new Quad(new Vector3(1.30f,3.00f,3.75f),
-new Vector3(1.30f,2.00f,3.75f),
-new Vector3(1.30f,2.00f,-3.75f),
-new Vector3(1.30f,3.00f,-3.75f)
-),
-
-new Quad(new Vector3(1.30f,3.00f,-3.75f),
-new Vector3(-1.50f,3.00f,-3.75f),
-new Vector3(-1.50f,3.00f,3.75f),
-new Vector3(1.30f,3.00f,3.75f)
-),
+,@"Texture\wall"),
 
 new Quad(new Vector3(1.30f,3.00f,3.75f),
 new Vector3(-1.50f,3.00f,3.75f),
 new Vector3(-1.50f,2.00f,3.75f),
 new Vector3(1.30f,2.00f,3.75f)
-),
+,@"Texture\wall"),
 
 new Quad(new Vector3(-1.50f,0.00f,3.75f),
-new Vector3(-0.79f,-0.01f,3.75f),
+new Vector3(-0.79f,0.00f,3.75f),
 new Vector3(-0.79f,1.99f,3.75f),
 new Vector3(-1.50f,2.00f,3.75f)
-),
+,@"Texture\wall"),
+
+new Quad(new Vector3(1.30f,1.80f,1.40f),
+new Vector3(1.30f,1.80f,-1.10f),
+new Vector3(1.30f,2.00f,-1.10f),
+new Vector3(1.30f,2.00f,1.40f)
+,@"Texture\wall"),
+
+new Quad(new Vector3(1.30f,1.80f,1.40f),
+new Vector3(1.30f,0.00f,1.40f),
+new Vector3(1.30f,0.00f,-1.80f),
+new Vector3(1.30f,1.80f,-1.80f)
+,@"Texture\wall"),
+
+new Quad(new Vector3(1.30f,0.00f,2.10f),
+new Vector3(1.30f,0.00f,1.40f),
+new Vector3(1.30f,1.30f,1.40f),
+new Vector3(1.30f,1.30f,2.10f)
+,@"Texture\wall"),
+
+new Quad(new Vector3(1.30f,2.00f,-1.80f),
+new Vector3(1.30f,0.00f,-1.80f),
+new Vector3(1.30f,0.00f,-3.75f),
+new Vector3(1.30f,2.00f,-3.75f)
+,@"Texture\wall"),
+
+new Quad(new Vector3(1.30f,3.00f,3.75f),
+new Vector3(1.30f,2.00f,3.75f),
+new Vector3(1.30f,2.00f,-3.75f),
+new Vector3(1.30f,3.00f,-3.75f)
+,@"Texture\wall"),
 
 new Quad(new Vector3(1.30f,2.00f,2.10f),
 new Vector3(1.30f,2.00f,3.75f),
 new Vector3(1.30f,0.00f,3.75f),
-new Vector3(1.30f,-0.00f,2.10f)
-),
+new Vector3(1.30f,0.00f,2.10f)
+,@"Texture\wall"),
+
+
                 #endregion
             };
+            Quad teto = new Quad(new Vector3(1.30f, 3.00f, -3.75f),
+            new Vector3(-1.50f, 3.00f, -3.75f),
+            new Vector3(-1.50f, 3.00f, 3.75f),
+            new Vector3(1.30f, 3.00f, 3.75f)
+            , @"Texture\helo");
 
-            Obj misc = new Obj(@"Texture\teste");
-            List<Quad> doorja = new List<Quad>
+            List<Quad> misc = new List<Quad>
             {
-                #region Portas e janelas
-                new Quad(new Vector3(1.30f,1.80f,-1.10f),
+                #region misc
+		new Quad(new Vector3(1.30f,1.80f,-1.10f),
 new Vector3(1.30f,1.80f,-1.80f),
 new Vector3(1.30f,2.00f,-1.80f),
-new Vector3(1.30f,2.00f,-1.10f),
-Color.Red),
+new Vector3(1.30f,2.00f,-1.10f)
+,@"Texture\wood"),
 
 new Quad(new Vector3(1.30f,1.30f,2.10f),
 new Vector3(1.30f,1.30f,1.40f),
 new Vector3(1.30f,2.00f,1.40f),
-new Vector3(1.30f,2.00f,2.10f),
-Color.Red),
+new Vector3(1.30f,2.00f,2.10f)
+,@"Texture\wood"),
 
 new Quad(new Vector3(-1.50f,2.00f,1.75f),
 new Vector3(-1.50f,2.00f,0.75f),
 new Vector3(-1.50f,1.00f,0.75f),
-new Vector3(-1.50f,1.00f,1.75f),
-Color.Red),
+new Vector3(-1.50f,1.00f,1.75f)
+,@"Texture\wood"),
 
 new Quad(new Vector3(-1.50f,2.00f,-1.80f),
 new Vector3(-1.50f,1.30f,-1.80f),
 new Vector3(-1.50f,1.30f,-1.10f),
-new Vector3(-1.50f,2.00f,-1.10f),
-Color.Red),
+new Vector3(-1.50f,2.00f,-1.10f)
+,@"Texture\wood"),
 
 new Quad(new Vector3(-1.50f,1.00f,1.75f),
 new Vector3(-1.50f,1.00f,2.75f),
 new Vector3(-1.50f,2.00f,2.75f),
-new Vector3(-1.50f,2.00f,1.75f),
-Color.Red),
+new Vector3(-1.50f,2.00f,1.75f)
+,@"Texture\wood"),
 
 new Quad(new Vector3(-0.79f,1.99f,3.75f),
 new Vector3(-0.79f,-0.01f,3.75f),
 new Vector3(0.51f,-0.01f,3.75f),
-new Vector3(0.51f,1.99f,3.75f),
-Color.Red),
-                #endregion
+new Vector3(0.51f,1.99f,3.75f)
+,@"Texture\wood"), 
+	#endregion
             };
-            casa.AddQuads(houseBody);
-            casa.AddQuads(doorja);
-            casa.SetPosition(0.1f, -1.5f, 0); 
             #endregion
-
+            parede.Add(teto);
+            casa.AddQuads(misc);
+            casa.AddQuads(parede);
+            casa.SetPosition(0, -1.5f, 0);
+            
             Obj chao = new Obj(@"Texture\Ground",
             #region set do chao
-new List<Quad> 
+            new List<Quad> 
                     { 
                         new Quad(
                             new Vector3(8.5f,0,-9),
                             new Vector3(8.5f,0,9),
                             new Vector3(-8.5f,0,9),
-                            new Vector3(-8.5f,0,-9))
+                            new Vector3(-8.5f,0,-9),"")
                     }
                 );
-            chao.SetPosition(0, -1.5f, 0);
+            chao.SetPosition(0, -1.6f, 0);
             chao.Rotate(Vector3.Up, MathHelper.ToRadians(180));
             #endregion
-
-            Obj parede = new Obj(new List<Quad> { 
-                    new Quad(
-                        new Vector3(-1,-1,0),
-                        new Vector3(-1,1,0),
-                        new Vector3(1,1,0),
-                        new Vector3(1,-1,0))
-                    });
-            parede.SetPosition(5, 0, 0);
             
             //TODO: Create sets
             //TODO: Include objects on set
             List<Obj> pimba = new List<Obj> 
             {
-                casa,
                 chooper,
-                chao
+                chao,
+                casa
             };
 
             //TODO: Create scenes

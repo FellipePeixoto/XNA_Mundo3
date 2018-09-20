@@ -37,6 +37,51 @@
       <Output>C:\Users\felli\Documents\Visual Studio 2010\Projects\Mundo3\Mundo3\Mundo3\bin\x86\Debug\Content\Texture\wall.xnb</Output>
       <Time>2018-09-19T19:06:37.502243-03:00</Time>
     </Item>
+    <Item>
+      <Source>Texture\camo.jpg</Source>
+      <Name>Texture\camo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\felli\Documents\Visual Studio 2010\Projects\Mundo3\Mundo3\Mundo3\bin\x86\Debug\Content\Texture\camo.xnb</Output>
+      <Time>2018-09-19T19:59:49.868207-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\blade.jpg</Source>
+      <Name>Texture\blade</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\felli\Documents\Visual Studio 2010\Projects\Mundo3\Mundo3\Mundo3\bin\x86\Debug\Content\Texture\blade.xnb</Output>
+      <Time>2018-09-19T20:45:13.6588973-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\vidro.jpg</Source>
+      <Name>Texture\vidro</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\felli\Documents\Visual Studio 2010\Projects\Mundo3\Mundo3\Mundo3\bin\x86\Debug\Content\Texture\vidro.xnb</Output>
+      <Time>2018-09-19T22:13:17.2886366-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\helo.jpg</Source>
+      <Name>Texture\helo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\felli\Documents\Visual Studio 2010\Projects\Mundo3\Mundo3\Mundo3\bin\x86\Debug\Content\Texture\helo.xnb</Output>
+      <Time>2018-09-19T22:20:40.612622-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\wood.jpg</Source>
+      <Name>Texture\wood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\felli\Documents\Visual Studio 2010\Projects\Mundo3\Mundo3\Mundo3\bin\x86\Debug\Content\Texture\wood.xnb</Output>
+      <Time>2018-09-19T22:29:08.2400644-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
